@@ -12,7 +12,7 @@ func TestDo(t *testing.T) {
 		args args
 		want string
 	}{
-		// 以下用例参考：https://github.com/php/php-src/blob/master/ext/standard/tests/strings/trim.phpt
+		// 以下用例参考：https://github.com/php/php-src/blob/5b01c4863fe9e4bc2702b2bbf66d292d23001a18/ext/standard/tests/general_functions/boolval.phpt
 		// var_dump('ABC' ===  trim('ABC'));
 		{
 			name: "case1:ABC",
