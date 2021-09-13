@@ -13,7 +13,7 @@ func TestCommon(t *testing.T) {
 		args args
 		want string
 	}{
-		// TODO: Add test cases.
+		// FROM EXAMPLE: https://github.com/php/php-src/blob/master/ext/standard/tests/strings/trim.phpt
 		{
 			name: "case-1:普通空格符",
 			args: args{

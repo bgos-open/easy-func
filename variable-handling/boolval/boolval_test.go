@@ -11,7 +11,7 @@ func TestDo(t *testing.T) {
 		args args
 		want bool
 	}{
-		// TODO: Add test cases.
+		// FROM EXAMPLE: https://github.com/php/php-src/blob/5b01c4863fe9e4bc2702b2bbf66d292d23001a18/ext/standard/tests/general_functions/boolval.phpt
 		{
 			name: "case-1:string-false",
 			args: args{
