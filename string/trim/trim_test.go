@@ -94,7 +94,7 @@ func TestDo(t *testing.T) {
 		//},
 		// 以下是自己写的用例
 		{
-			name: "case-1:普通空格符",
+			name: "case-1:blank",
 			args: args{
 				str:       " 12 3 ",
 				character: []string{},
@@ -102,7 +102,7 @@ func TestDo(t *testing.T) {
 			want: "12 3",
 		},
 		{
-			name: "case-2.1:换行符等",
+			name: "case-2.1:newline",
 			args: args{
 				str:       " 12 3 \n\r\t\v\0000\v\v\v",
 				character: []string{},
@@ -110,7 +110,7 @@ func TestDo(t *testing.T) {
 			want: "12 3",
 		},
 		{
-			name: "case-2.2:换行符等",
+			name: "case-2.2:multi",
 			args: args{
 				str:       " 12 3 \n\v",
 				character: []string{},
@@ -118,7 +118,7 @@ func TestDo(t *testing.T) {
 			want: "12 3",
 		},
 		{
-			name: "case-3.1:不同的字符",
+			name: "case-3.1:different char",
 			args: args{
 				str:       ` 12 3 abAc`,
 				character: []string{"bacAcab"},
@@ -126,7 +126,7 @@ func TestDo(t *testing.T) {
 			want: " 12 3 ",
 		},
 		{
-			name: "case-4.1:空白能处理",
+			name: "case-4.1:none",
 			args: args{
 				str:       ``,
 				character: []string{"bacAcab"},
@@ -134,7 +134,7 @@ func TestDo(t *testing.T) {
 			want: "",
 		},
 		{
-			name: "case-4.2:空白不去除",
+			name: "case-4.2:none",
 			args: args{
 				str:       ` `,
 				character: []string{""},
