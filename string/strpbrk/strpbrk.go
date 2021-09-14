@@ -3,7 +3,7 @@ package strpbrk
 import "strings"
 
 func Do(haystack string, charList string) interface{} {
-	if len(charList) < 0 {
+	if len(charList) == 0 {
 		return false
 	}
 	r := strings.Index(haystack, charList)
