@@ -15,46 +15,47 @@ func TestDo(t *testing.T) {
 		args args
 		want interface{}
 	}{
+		//FROM EXAMPLE:https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strpbrk_basic.phpt
 		// TODO: Add test cases.
 		{
-			"case-1:搜索字符在最前面",
+			"A",
 			args{
-				"test string.",
-				"test",
-			},
-			"test string.",
-		},
-		{
-			"case-2:搜索字符不在最前面",
-			args{
-				"test string.",
-				"string",
-			},
-			"string.",
-		},
-		{
-			"case-3:非从头开始搜索",
-			args{
-				"test string string",
-				"string",
-			},
-			"string string",
-		},
-		{
-			"case-4:搜索字符不存在",
-			args{
-				"test string",
-				"hello",
+				"This is a Simple text.",
+				"mi",
 			},
 			false,
 		},
 		{
-			"case-5:区分大小写",
+			"B",
 			args{
-				"test string",
-				"String",
+				"This is a Simple text",
+				"a",
+			},
+			"a Simple text",
+		},
+		{
+			"C",
+			args{
+				"This is a Simple text",
+				"A",
 			},
 			false,
+		},
+		{
+			"D",
+			args{
+				"5",
+				"5",
+			},
+			"5",
+		},
+		{
+			"E",
+			args{
+				"This is a Simple text.",
+				" ",
+			},
+			" is a Simple text.",
 		},
 	}
 	for _, tt := range tests {
