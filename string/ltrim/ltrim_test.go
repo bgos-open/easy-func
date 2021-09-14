@@ -12,7 +12,7 @@ func TestDo(t *testing.T) {
 		args args
 		want string
 	}{
-		// TODO: Add test cases.
+		// reference: Add test cases.
 		{
 			name: "case-1:blank",
 			args: args{
