@@ -12,7 +12,7 @@ func TestDo(t *testing.T) {
 		args args
 		want string
 	}{
-		// FROM EXAMPLE: https://github.com/php/php-src/blob/master/ext/standard/tests/strings/trim.phpt
+		// reference: https://github.com/php/php-src/blob/master/ext/standard/tests/strings/trim.phpt
 		// var_dump('ABC' ===  trim('ABC'));
 		{
 			name: "case1:ABC",
