@@ -23,7 +23,7 @@ func TestDo(t *testing.T) {
 				"This is a Simple text.",
 				"mi",
 			},
-			false,
+			"",
 		},
 		{
 			"B",
@@ -39,7 +39,7 @@ func TestDo(t *testing.T) {
 				"This is a Simple text",
 				"A",
 			},
-			false,
+			"",
 		},
 		{
 			"D",
@@ -60,7 +60,7 @@ func TestDo(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Do(tt.args.haystack, tt.args.needle); !reflect.DeepEqual(got, tt.want) {
+			if got, _ := Do(tt.args.haystack, tt.args.needle); !reflect.DeepEqual(got, tt.want) {
 				t.Errorf("Do() = %v, want %v", got, tt.want)
 			}
 		})

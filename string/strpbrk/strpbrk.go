@@ -2,13 +2,13 @@ package strpbrk
 
 import "strings"
 
-func Do(haystack ...string) interface{} {
-	if len(haystack) < 2 {
-		return false
+func Do(haystack string, charList string) (colStr string, res bool) {
+	if len(charList) <= 0 {
+		return "", false
 	}
-	r := strings.Index(haystack[0], haystack[1])
+	r := strings.Index(haystack, charList)
 	if r == -1 {
-		return false
+		return "", false
 	}
-	return haystack[r:]
+	return haystack[r:], true
 }
