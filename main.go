@@ -1,1 +1,1 @@
-package easy_func_3
+package main 
