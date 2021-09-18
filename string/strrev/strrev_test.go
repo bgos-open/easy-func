@@ -11,8 +11,7 @@ func TestDo(t *testing.T) {
 		args args
 		want string
 	}{
-		// TODO: Add test cases.
-		//FROM EXAMPLE:https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strrev_basic.phpt
+		//referrence:https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strrev_basic.phpt
 		{
 			"A",
 			args{
