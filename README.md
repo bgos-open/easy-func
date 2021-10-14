@@ -50,7 +50,7 @@
   - [ ] [metaphone()](https://www.php.net/manual/en/function.metaphone)
   - [ ] [money_format()](https://www.php.net/manual/en/function.money-format)
   - [ ] [nl_langinfo()](https://www.php.net/manual/en/function.nl-langinfo)
-  - [ ] [nl2br()](https://www.php.net/manual/en/function.nl2br)
+  - [x] [nl2br()](https://www.php.net/manual/en/function.nl2br)
   - [ ] [number_format()](https://www.php.net/manual/en/function.number-format)
   - [x] [ord()](https://www.php.net/manual/en/function.ord)
   - [ ] [parse_str()](https://www.php.net/manual/en/function.parse-str)
