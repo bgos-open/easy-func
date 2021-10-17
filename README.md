@@ -75,7 +75,7 @@
   - [x] [str_repeat()](https://www.php.net/manual/en/function.str-repeat)
   - [ ] [str_replace()](https://www.php.net/manual/en/function.str-replace)
   - [ ] [str_rot13()](https://www.php.net/manual/en/function.str-rot13)
-  - [ ] [str_shuffle()](https://www.php.net/manual/en/function.str-shuffle)
+  - [x] [str_shuffle()](https://www.php.net/manual/en/function.str-shuffle)
   - [ ] [str_split()](https://www.php.net/manual/en/function.str-split)
   - [ ] [str_starts_with()](https://www.php.net/manual/en/function.str-starts-with)
   - [ ] [str_word_count()](https://www.php.net/manual/en/function.str-word-count)
