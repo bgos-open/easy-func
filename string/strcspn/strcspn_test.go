@@ -12,60 +12,70 @@ func TestDo(t *testing.T) {
 	tests := []struct {
 		name string
 		args args
-		want int
+		want interface{}
 	}{
 		{
-			name: "case 1:offset > len(str)",
+			name: "case 1:length=0",
 			args: args{
 				"hello world",
-				"wor",
-				100,
+				"w",
+				2,
 				0,
 			},
 			want: 0,
 		},
 		{
-			name: "case 2:offset>0",
+			name: "case 2:offset>0 && length<0",
 			args: args{
 				"hello world",
 				"w",
 				2,
-				0,
+				-2,
 			},
 			want: 4,
 		},
 		{
-			name: "case 3:offset < 0",
+			name: "case 3:offset>0 && length>0",
 			args: args{
 				"hello world",
 				"w",
-				-2,
-				0,
-			},
-			want: 2,
-		},
-		{
-			name: "case 4:offset == 0",
-			args: args{
-				"hello world",
-				"w",
-				0,
-				0,
-			},
-			want: 6,
-		},
-		{
-			name: "case 5:length>0",
-			args: args{
-				"hello world",
-				"w",
-				0,
+				2,
 				2,
 			},
 			want: 2,
 		},
 		{
-			name: "case 6:length>len(str)",
+			name: "case 4:offset<0 && length<0",
+			args: args{
+				"hello world",
+				"w",
+				-8,
+				-2,
+			},
+			want: 3,
+		},
+		{
+			name: "case 5:offset<0 && length<0",
+			args: args{
+				"hello world",
+				"w",
+				-8,
+				-8,
+			},
+			want: 0,
+		},
+		{
+			name: "case 6:offset>0 && length+∞",
+			args: args{
+				"hello world",
+				"w",
+				2,
+				2147483647,
+			},
+			want: 4,
+		},
+		{
+			name: "case 7:offset=0 && length+∞",
 			args: args{
 				"hello world",
 				"w",
@@ -75,14 +85,34 @@ func TestDo(t *testing.T) {
 			want: 6,
 		},
 		{
-			name: "case 7:two or more char",
+			name: "case 8:offset<0 && length+∞",
 			args: args{
 				"hello world",
-				"world",
+				"w",
+				-8,
+				2147483647,
+			},
+			want: 3,
+		},
+		{
+			name: "case 9:two or more char",
+			args: args{
+				"hello world",
+				"ok",
 				0,
 				2147483647,
 			},
-			want: 2,
+			want: 4,
+		},
+		{
+			name: "case 10:offset > len(str)",
+			args: args{
+				"hello world",
+				"ok",
+				20,
+				2147483647,
+			},
+			want: false,
 		},
 	}
 

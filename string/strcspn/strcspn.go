@@ -1,33 +1,34 @@
 package strcspn
 
 import (
-	"math"
 	"strings"
 )
 
 //https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strcspn.phpt
-func Do(str string, char string, offset int, length int) int {
-	// abs offset must less than the length of str
-	if int(math.Abs(float64(offset))) >= len(str) {
+func Do(str string, char string, offset int, length int) interface{} {
+	lenStr := len(str)
+	if offset >= lenStr {
+		return false
+	}
+	if offset < 0 {
+		offset = lenStr + offset
+	}
+	if length < 0 {
+		length = lenStr + length - offset
+	}
+	if length <= 0 {
 		return 0
 	}
-
-	if offset > 0 {
-		str = str[offset:]
-	} else if offset < 0 {
-		str = str[len(str) + offset:]
+	reach := offset + length
+	if reach >= lenStr {
+		reach = lenStr
 	}
-
-	if length > 0 && length < len(str) {
-		str = str[0: length]
-	}
-
+	str = str[offset: reach]
 	for k,v := range str {
 		index := strings.Index(char, string(v))
 		if index != -1 {
 			return k
 		}
 	}
-
 	return  len(str)
 }
