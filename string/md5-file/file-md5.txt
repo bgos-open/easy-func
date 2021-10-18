@@ -1,0 +1,1 @@
+Test md5_file() function with ASCII output and raw binary output.
