@@ -5,7 +5,6 @@ import (
 )
 
 // Do — implode — Join array elements with a string (https://www.php.net/manual/en/function.implode.php)
-// Tip: The merging of the map type is affected by the return order of reflect.keys, and the result of the merging will be different from the order of the map.
 func Do(Sep string, array []string) (res string) {
 	strLen := len(array)
 	if strLen == 0 {
