@@ -35,7 +35,7 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-4:",
 			args: args{
-				"aaa",
+				1,
 			},
 			want: false,
 		},
