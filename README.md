@@ -8,7 +8,7 @@
 - 单元测试
     - 单测用例需参考 [https://github.com/php/php-src/tree/master/ext/standard/tests/strings](https://github.com/php/php-src/tree/master/ext/standard/tests/strings)
     - 单测覆盖率：go-carpet 或者 go-carpet --summary 保障单元测试覆盖率
-    - 单测规范：goland -> general -> test for function 来生成单元测试用例代码
+    - 单测规范：goland -> Generate -> test for function 来生成单元测试用例代码
     - **单测覆盖率要求：100%**
 - 圈复杂度
     - 在根目录使用命令 gocyclo -over 10 ./ 检查圈复杂度
