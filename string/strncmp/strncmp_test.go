@@ -16,6 +16,7 @@ func TestDo(t *testing.T) {
 		wantRes int
 		wantErr bool
 	}{
+		//FROM Example:https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strncmp_basic.phpt
 		// TODO: Add test cases.
 		{
 			name: "case-1",
@@ -44,8 +45,8 @@ func TestDo(t *testing.T) {
 				str2:   "str2",
 				length: 5,
 			},
-			wantRes: 0,
-			wantErr: true,
+			wantRes: -1,
+			wantErr: false,
 		},
 		{
 			name: "case-4",
