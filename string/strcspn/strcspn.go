@@ -5,10 +5,10 @@ import (
 )
 
 //https://github.com/php/php-src/blob/master/ext/standard/tests/strings/strcspn.phpt
-func Do(str string, char string, offset int, length int) interface{} {
+func Do(str string, char string, offset int, length int) int {
 	lenStr := len(str)
 	if offset >= lenStr {
-		return false
+		return 0
 	}
 	if offset < 0 {
 		offset = lenStr + offset

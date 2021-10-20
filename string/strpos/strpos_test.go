@@ -51,7 +51,7 @@ func TestDo(t *testing.T) {
 				"hello",
 				0,
 			},
-			false,
+			-1,
 		},
 		{
 			"case-5:",
@@ -60,7 +60,7 @@ func TestDo(t *testing.T) {
 				"String",
 				0,
 			},
-			false,
+			-1,
 		},
 	}
 	for _, tt := range tests {

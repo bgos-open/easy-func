@@ -112,7 +112,7 @@ func TestDo(t *testing.T) {
 				20,
 				2147483647,
 			},
-			want: false,
+			want: 0,
 		},
 	}
 
