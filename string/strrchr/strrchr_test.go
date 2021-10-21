@@ -4,11 +4,9 @@ import "testing"
 
 func TestDo(t *testing.T) {
 	type args struct {
-		s interface{}
+		s byte
 	}
-	var k int8 = 97
-	var k2 uint8 = 97
-	var k3  = [2]int{1,2}
+
 	tests := []struct {
 		name string
 		args args
@@ -16,53 +14,23 @@ func TestDo(t *testing.T) {
 	}{
 		{
 			"a bc efg",
-			args{"b"},
+			args{'b'},
 			"bc efg",
 		},
 		{
 			"a bc efg",
-			args{"bce"},
-			"bc efg",
-		},
-		{
-			"a bc efg",
-			args{99},
-			"c efg",
-		},
-		{
-			"a bc efg",
-			args{"e"},
+			args{'e'},
 			"efg",
 		},
 		{
 			"a bc efg",
-			args{k},
-			"a bc efg",
-		},
-		{
-			"a bc efg",
-			args{k2},
-			"a bc efg",
-		},
-		{
-			"a bc efg",
-			args{""},
-			"",
-		},
-		{
-			"a bc efg",
-			args{k3},
-			"",
-		},
-		{
-			"a bc efg",
-			args{12222},
-			"",
-		},
-		{
-			"a bc efg",
-			args{" "},
+			args{' '},
 			" efg",
+		},
+		{
+			"a bc efg",
+			args{'1'},
+			"",
 		},
 	}
 	for _, tt := range tests {
