@@ -35,7 +35,7 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-2:slice-false",
 			args: args{
-				value: []int{4,5,6,7,8},
+				value: []int{4, 5, 6, 7, 8},
 			},
 			want: false,
 		},
@@ -46,7 +46,6 @@ func TestDo(t *testing.T) {
 			},
 			want: false,
 		},
-
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

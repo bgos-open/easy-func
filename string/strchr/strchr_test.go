@@ -17,8 +17,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-1",
 			args: args{
-				haystack: "test string",
-				needle: "test",
+				haystack:     "test string",
+				needle:       "test",
 				beforeNeedle: false,
 			},
 			want: "test string",
@@ -26,8 +26,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-2",
 			args: args{
-				haystack: "test string",
-				needle: "string",
+				haystack:     "test string",
+				needle:       "string",
 				beforeNeedle: false,
 			},
 			want: "string",
@@ -35,8 +35,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-3",
 			args: args{
-				haystack: "test string",
-				needle: "t s",
+				haystack:     "test string",
+				needle:       "t s",
 				beforeNeedle: false,
 			},
 			want: "t string",
@@ -44,8 +44,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-4",
 			args: args{
-				haystack: "tEst",
-				needle: "test",
+				haystack:     "tEst",
+				needle:       "test",
 				beforeNeedle: false,
 			},
 			want: "",
@@ -53,8 +53,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-5",
 			args: args{
-				haystack: "",
-				needle: "",
+				haystack:     "",
+				needle:       "",
 				beforeNeedle: false,
 			},
 			want: "",
@@ -62,8 +62,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-6",
 			args: args{
-				haystack: "a",
-				needle: "",
+				haystack:     "a",
+				needle:       "",
 				beforeNeedle: false,
 			},
 			want: "",
@@ -71,8 +71,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-7",
 			args: args{
-				haystack: "",
-				needle: "a",
+				haystack:     "",
+				needle:       "a",
 				beforeNeedle: false,
 			},
 			want: "",
@@ -80,8 +80,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-8",
 			args: args{
-				haystack: "aexample.com",
-				needle: "@",
+				haystack:     "aexample.com",
+				needle:       "@",
 				beforeNeedle: false,
 			},
 			want: "",
@@ -89,8 +89,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-9",
 			args: args{
-				haystack: "aexample.com",
-				needle: "@",
+				haystack:     "aexample.com",
+				needle:       "@",
 				beforeNeedle: true,
 			},
 			want: "",
@@ -98,8 +98,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-10",
 			args: args{
-				haystack: "a@example.com",
-				needle: "@",
+				haystack:     "a@example.com",
+				needle:       "@",
 				beforeNeedle: false,
 			},
 			want: "@example.com",
@@ -107,8 +107,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-11",
 			args: args{
-				haystack: "a@example.com",
-				needle: "@",
+				haystack:     "a@example.com",
+				needle:       "@",
 				beforeNeedle: true,
 			},
 			want: "a",
@@ -116,8 +116,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-12",
 			args: args{
-				haystack: "asdfasdfas@e",
-				needle: "@",
+				haystack:     "asdfasdfas@e",
+				needle:       "@",
 				beforeNeedle: false,
 			},
 			want: "@e",
@@ -125,8 +125,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-13",
 			args: args{
-				haystack: "asdfasdfas@e",
-				needle: "@",
+				haystack:     "asdfasdfas@e",
+				needle:       "@",
 				beforeNeedle: true,
 			},
 			want: "asdfasdfas",
@@ -134,8 +134,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-14",
 			args: args{
-				haystack: "@",
-				needle: "@",
+				haystack:     "@",
+				needle:       "@",
 				beforeNeedle: false,
 			},
 			want: "@",
@@ -143,8 +143,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-15",
 			args: args{
-				haystack: "@",
-				needle: "@",
+				haystack:     "@",
+				needle:       "@",
 				beforeNeedle: true,
 			},
 			want: "",
@@ -152,8 +152,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-16",
 			args: args{
-				haystack: "eE@fF",
-				needle: "e",
+				haystack:     "eE@fF",
+				needle:       "e",
 				beforeNeedle: false,
 			},
 			want: "eE@fF",
@@ -161,8 +161,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-17",
 			args: args{
-				haystack: "eE@fF",
-				needle: "e",
+				haystack:     "eE@fF",
+				needle:       "e",
 				beforeNeedle: true,
 			},
 			want: "",
@@ -170,8 +170,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-18",
 			args: args{
-				haystack: "eE@fF",
-				needle: "E",
+				haystack:     "eE@fF",
+				needle:       "E",
 				beforeNeedle: false,
 			},
 			want: "E@fF",
@@ -179,8 +179,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-19",
 			args: args{
-				haystack: "eE@fF",
-				needle: "E",
+				haystack:     "eE@fF",
+				needle:       "E",
 				beforeNeedle: true,
 			},
 			want: "e",
@@ -188,8 +188,8 @@ func TestDo(t *testing.T) {
 		{
 			name: "case-20",
 			args: args{
-				haystack: "",
-				needle: " ",
+				haystack:     "",
+				needle:       " ",
 				beforeNeedle: false,
 			},
 			want: "",

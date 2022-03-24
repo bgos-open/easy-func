@@ -23,12 +23,12 @@ func Do(str string, char string, offset int, length int) int {
 	if reach >= lenStr {
 		reach = lenStr
 	}
-	str = str[offset: reach]
-	for k,v := range str {
+	str = str[offset:reach]
+	for k, v := range str {
 		index := strings.Index(char, string(v))
 		if index != -1 {
 			return k
 		}
 	}
-	return  len(str)
+	return len(str)
 }
